@@ -14,8 +14,12 @@ app.secret_key = "change-this-secret-key"
 CORS(
     app,
     supports_credentials=True,
-    origins=["http://localhost:5173"]
+    origins=[
+        "http://localhost:5173",
+        "https://yashpanel-frontend.vercel.app",  # your real Vercel URL
+    ]
 )
+
 
 # JSON file paths
 USERS_FILE = "users.json"
